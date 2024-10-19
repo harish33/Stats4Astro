@@ -22,6 +22,12 @@ rerr = np.random.randn(n)*rsig
 
 mm = m+merr
 rm = r+rerr
+
+f = open("wd_err.txt","w")
+for i in range(len(m)):
+   f.write("%f, %f\n"%(mm[i],rm[i])) 
+f.close()
+
 plt.errorbar(x=mm,y=rm,xerr=msig,yerr=rsig,fmt='k.')
 plt.xlabel(r"Mass [M$_\odot$]")
 plt.ylabel(r"Radius [R$_\odot$]")
