@@ -1,63 +1,29 @@
 import numpy as np
 import matplotlib.pyplot as plt
-#
-#
-def pearson(x,y):
-   n = len(x)
-   pearson_r = (n*np.sum(x*y)-np.sum(x)*np.sum(y))/\
-               ((n*np.sum(x**2)-(np.sum(x))**2)**0.5 *\
-               (n*np.sum(y**2)-(np.sum(y))**2)**0.5)
-   return pearson_r
-#
-def spearman(x,y):
-   Im = np.argsort(x)
-   Ir = np.argsort(y)
-   Rm = np.zeros(n)
-   Rr = np.zeros(n)
-   for i in range(n):
-      Rm[Im[i]]=i+1
-      Rr[Ir[i]]=i+1
-   #
-   spearman_r = pearson(Rm,Rr)
-   return spearman_r
-#
-#
-Nb = 5000
 
-tp = np.loadtxt("wd.txt",delimiter=",")
-m = tp[:,0]
-r = tp[:,1]
-n = len(m)
-#
-samples_pearson = np.zeros(Nb)
-samples_spearman = np.zeros(Nb)
-#
-mb = np.zeros(n)
-rb = np.zeros(n)
-#
+Nb = 10000
+x = np.array([1.209, 0.645, 0.788, 0.840, 0.930, 1.195, 0.597, 0.851, 1.107, 0.814, 0.695, 0.592, 0.752, 1.204, 1.205, 1.175, 0.920, 0.656, 1.240, 1.168])
+
+print ("Sample mean = ", end = "")
+
+
+print ("%.2f"%np.mean(x))
+
+means = np.zeros(Nb)
 for i in range(Nb):
-   for j in range(n):
-      I = np.ceil(np.random.rand()*(n-1)).astype(int)
-      mb[j] = m[I]
-      rb[j] = r[I]
-   samples_pearson[i] = pearson(mb,rb)
-   samples_spearman[i] = spearman(mb,rb)
-#
-#
+   I = np.floor(np.random.rand(len(x))*19).astype(int)
+   xb = np.array([x[j] for j in I])
+   means[i] = np.mean(xb)
 
-y1,x1 = np.histogram(samples_pearson,bins=20)
+y1,x1 = np.histogram(means,bins=100)
+y = y1.astype("float")
 x = 0.5*(x1[1:]+x1[:-1])
-y = y1.astype(int)
-plt.step(x=x,y=y,label="Pearson")
-y1,x1 = np.histogram(samples_spearman,bins=20)
-x = 0.5*(x1[1:]+x1[:-1])
-y = y1.astype(int)
-plt.step(x=x,y=y,label="Spearman")
-plt.legend()
-plt.xlabel("Coefficient")
-plt.ylabel("Num. of occurances")
+
+bstd = np.std(means)
+print ("Bootstrap std = %.2f"%bstd, end = "")
+plt.step(x,y)
+plt.xlabel("Bootstrap Means [Gyr]")
+plt.ylabel(r"Estimated PDF [Gyr$^{-1}$]")
 plt.tight_layout()
-plt.savefig("wd_boot.png")
-plt.show()
+plt.savefig("bootstrap.png")
 plt.close()
-#
