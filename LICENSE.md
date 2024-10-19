@@ -1,0 +1,1 @@
+Stats4Astro © 2024 by [H. K. Vedantham](https://www.astron.nl/~vedantham/) is licensed under [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1). To view a copy of this license, visit [this link](https://creativecommons.org/licenses/by-nc-sa/4.0/)
