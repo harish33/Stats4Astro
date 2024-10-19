@@ -1,4 +1,4 @@
-## Stats4Astro
+# Stats4Astro
 Lecture notes and example code for my Undergraduate Statistics course taught in the fall of 2024 (Sept to Nov) at the Astronomy department of the University of Groningen. 
 The course consists of 4hr per week of lectures and 2-4hr per week of tutorials. It ran for 8 weeks. 
 The students learn the theoretical concepts in the lectures and get hands-on implementation in the tutorials (mostly with python)
@@ -13,12 +13,12 @@ The recommended additional reading for the course was "Data Analysis: A Bayesian
 The code examples are implemented with python3 and use the python packages: math, numpy, scipy and matplotlib.
 The plots in the notes were rendered using a matplotlibrc file that was based on the [suggestions of Monica Turner](https://turnermoni.ca/python3.html)
 
-# Suggestions for improvement
+## Suggestions for improvement
 If you have any suggestions for improvement, then please send them to vedantham at astron dot nl.
 
-# I found a mistake
+## I found a mistake
 This is to be expected. I learnt that I was going to teach the course far too late, which meant that I was typing up my notes and codes during the 8-week course (under some time pressure). Please communicate these errors to me at vedantham at astron dot nl and I will be very grateful.
 
-# The tone used in the notes seems .... weird?
-The notes use an informal tone and in some places may even read like a popular book meant for a lay audience. This is a deliberate choice as I feel that textbooks/notes for undergraduates should use an inviting language while being rigorous at the same time. Several students in my course came up to tell me that they liked these notes, so I think I am on to something here. 
+## The tone used in the notes seems .... weird?
+The notes use an informal tone and in some places may even read like a popular book meant for a lay audience. This is a deliberate choice as I feel that textbooks/notes for undergraduates should use an inviting language while being rigorous at the same time. Several students in my course came up to tell me that they really like these notes, so I think I am on to something here. 
 
