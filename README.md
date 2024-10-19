@@ -11,7 +11,7 @@ The best way for a student of statistics to benefit from this material is to rea
 The course was taught by [Prof. Scott Trager](https://www.rug.nl/staff/s.c.trager/?lang=en) before I took over. I did not alter the syllabus of the course much. So credit is due to Scott for the formulation of the syllabus. 
 The recommended additional reading for the course was "Data Analysis: A Bayesian Tutorial" by Silvia and Skilling, which is also a hold-over from Scott's course. I did not use the material in the book to formulate my notes, so the notes stand apart. However, the selection of topics covered do have some influence from the topics in the book, so I credit it here.
 
-The code examples are implemented with python3 and use the python packages: math, numpy, scipy and matplotlib.
+The code examples are implemented with python3 and use the python packages: math, [numpy](https://numpy.org/), [scipy](https://scipy.org/), [matplotlib](https://matplotlib.org/) and [corner](https://corner.readthedocs.io/en/latest/).
 The plots in the notes were rendered using a matplotlibrc file that was based on the [suggestions of Monica Turner](https://turnermoni.ca/python3.html)
 
 ## I found a mistake
