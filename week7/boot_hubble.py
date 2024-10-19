@@ -40,4 +40,3 @@ figure = corner.corner(\
 )
 plt.savefig("boot_spec_corner.png")
 plt.close()
-
